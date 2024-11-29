@@ -1,0 +1,22 @@
+//tri par insertion
+function insertionSort(t) {
+    for (var i = 1; i < t.length; i++) {
+      var temp = t[i];  
+      var j = i - 1;
+      while (j >= 0 && t[j] > temp) {
+        t[j + 1] = t[j];
+        j--;
+      }
+   
+      t[j + 1] = temp;
+    }
+    return t; // Return the sorted array
+  }
+  
+   
+  tab = [8, 4, 6, 2, 9];
+  console.log("tableau avant:", tab);
+  nouvtab = insertionSort(tab);
+  console.log("tableau apres:", nouvtab);
+  
+  
